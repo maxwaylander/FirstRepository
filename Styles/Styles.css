@@ -1,0 +1,586 @@
+body {
+    background-color: white;
+    background-image: url("../images/backr.jpg");
+}
+
+.photo {
+    float: left;
+    width: 25%;
+    height: 25%;
+}
+
+.header {
+    width: 100%;
+    height: 110px;
+}
+
+.surname
+{
+    font-size: 50px;
+    text-align: center;
+    background-color: firebrick;
+}
+
+.job
+{
+    font-size: 35px;
+    width: 50%;
+    text-align: center;
+    padding-left: 200px;
+    column-width: 400px;
+    display: inline-flex;
+    column-gap: 50px;
+}
+
+.box
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.flex
+{
+
+    display: inline-flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content:space-around;
+    width: 1920px;
+}
+
+.one, .two, .three, .four
+{
+    padding: 50px;
+    margin: 10px;
+    background-color: burlywood;
+    border-style: solid;
+    border-radius: 10%;
+    text-align: center;
+    height: 300px;
+    width: 150px;
+    flex: 200px;
+    align-items: center;
+    block-size: auto;
+}
+.grid
+{
+    height: 1000px;
+    width: 500px;
+    display: grid;
+    grid-template-areas:
+    'five six'
+    'seven eight';
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    align-content: space-around;
+
+}
+
+.five, .six, .seven, .eight
+{
+    padding: 50px;
+    margin: 10px;
+    background-color: burlywood;
+    border-style: solid;
+    border-radius: 10%;
+    text-align: center;
+    height: 100px;
+    width: 200px;
+    align-items: center;
+    block-size: auto;
+}
+
+@media screen and (max-width:360px){
+
+    .header {
+        width: 100%;
+        height: 110px;
+    }
+
+    .photo {
+        float: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .surname
+    {
+        font-size: 50px;
+        text-align: center;
+        background-color: firebrick;
+    }
+
+    .job
+    {
+        font-size: 17px;
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        column-width: 0;
+        display: inline-flex;
+        column-gap: 20px;
+
+    }
+
+    .box
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 50px;
+    }
+
+    .flex
+    {
+
+        display: inline-flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: row;
+        justify-content:space-around;
+        width: 100%;
+    }
+
+    .one, .two, .three, .four
+    {
+        padding: 0;
+        margin: 0;
+        background-color: burlywood;
+        border-style: solid;
+        border-radius: 10%;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        flex: 100%;
+        align-items: center;
+        block-size: auto;
+    }
+    .grid
+    {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-areas: none;
+
+        grid-template-columns: none;
+        gap: 10px;
+        align-content: space-around;
+
+    }
+
+    .five, .six, .seven, .eight
+    {
+        padding: 0;
+        margin: 0;
+        background-color: burlywood;
+        border-style: solid;
+        border-radius: 10%;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        block-size: auto;
+    }
+
+}
+
+
+@media screen and (min-width:361px) and (max-width:576px){
+
+    .header {
+        width: 100%;
+        height: 110px;
+    }
+
+    .photo {
+        float: none;
+        width: 80%;
+        height: 100%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .surname
+    {
+        font-size: 50px;
+        text-align: center;
+        background-color: firebrick;
+    }
+
+    .job
+    {
+        font-size: 17px;
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        column-width: 0;
+        display: inline-flex;
+        column-gap: 20px;
+
+    }
+
+    .box
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 50px;
+    }
+
+    .flex
+    {
+
+        display: inline-flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: row;
+        justify-content:space-around;
+        width: 100%;
+    }
+
+    .one, .two, .three, .four
+    {
+        padding: 0;
+        margin: 0;
+        background-color: burlywood;
+        border-style: solid;
+        border-radius: 10%;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        flex: 100%;
+        align-items: center;
+        block-size: auto;
+    }
+    .grid
+    {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-areas: none;
+
+        grid-template-columns: none;
+        gap: 10px;
+        align-content: space-around;
+        justify-items: center;
+
+    }
+
+    .five, .six, .seven, .eight
+    {
+        padding: 0;
+        margin: 0;
+        background-color: burlywood;
+        border-style: solid;
+        border-radius: 10%;
+        text-align: center;
+        height: 100%;
+        width: 50%;
+        align-items: center;
+        block-size: auto;
+    }
+
+}
+
+@media screen and (min-width:577px) and (max-width:768px){
+
+    .header {
+        width: 100%;
+        height: 110px;
+    }
+
+    .photo {
+        float: none;
+        width: 60%;
+        height: 100%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .surname
+    {
+        font-size: 50px;
+        text-align: center;
+        background-color: firebrick;
+    }
+
+    .job
+    {
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        column-width: 0;
+        display: inline-flex;
+        column-gap: 0;
+
+    }
+
+    .box
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 50px;
+    }
+
+    .flex
+    {
+
+        display: inline-flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: row;
+        justify-content:space-around;
+        width: 100%;
+    }
+
+    .one, .two, .three, .four
+    {
+        padding: 0;
+        margin: 0;
+        background-color: burlywood;
+        border-style: solid;
+        border-radius: 10%;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        flex: 100%;
+        align-items: center;
+        block-size: auto;
+    }
+    .grid
+    {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+                'five six'
+                'seven eight';
+
+        grid-template-rows: none;
+        gap: 10px;
+        align-content: space-around;
+        justify-items: center;
+
+    }
+
+    .five, .six, .seven, .eight
+    {
+        padding: 0;
+        margin: 0;
+        background-color: burlywood;
+        border-style: solid;
+        border-radius: 10%;
+        text-align: center;
+        height: 100%;
+        width: 50%;
+        align-items: center;
+        block-size: auto;
+    }
+}
+@media screen and (min-width:769px) and (max-width:1200px){
+
+    .header {
+        width: 100%;
+        height: 110px;
+    }
+
+    .photo {
+        float: none;
+        width: 40%;
+        height: 100%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .surname
+    {
+        font-size: 50px;
+        text-align: center;
+        background-color: firebrick;
+    }
+
+    .job
+    {
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        column-width: 0;
+        display: inline-flex;
+        column-gap: 20px;
+
+    }
+
+    .box
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 50px;
+    }
+
+    .flex
+    {
+
+        display: inline-flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: row;
+        justify-content:space-around;
+        width: 100%;
+    }
+
+    .one, .two, .three, .four
+    {
+        padding: 0;
+        margin: 0;
+        background-color: burlywood;
+        border-style: solid;
+        border-radius: 10%;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        flex: 100%;
+        align-items: center;
+        block-size: auto;
+    }
+    .grid
+    {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-areas: none;
+
+        grid-template-columns: none;
+        gap: 10px;
+        align-content: space-around;
+        justify-items: center;
+
+    }
+
+    .five, .six, .seven, .eight
+    {
+        padding: 0;
+        margin: 0;
+        background-color: burlywood;
+        border-style: solid;
+        border-radius: 10%;
+        text-align: center;
+        height: 100%;
+        width: 50%;
+        align-items: center;
+        block-size: auto;
+    }
+}
+    @media screen and (min-width:1201px)
+    {
+        .header {
+            width: 100%;
+            height: 110px;
+        }
+
+        .photo {
+            float: none;
+            width: 30%;
+            height: 100%;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .surname
+        {
+            font-size: 50px;
+            text-align: center;
+            background-color: firebrick;
+        }
+
+        .job
+        {
+            font-size: 20px;
+            width: 100%;
+            text-align: center;
+            padding-left: 0;
+            column-width: 0;
+            display: inline-flex;
+            column-gap: 50px;
+
+        }
+
+        .box
+        {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 50px;
+        }
+
+        .flex
+        {
+
+            display: inline-flex;
+            gap: 10px;
+            flex-wrap: nowrap;
+            align-items: center;
+            flex-direction: row;
+            justify-content:space-around;
+            width: 100%;
+        }
+
+        .one, .two, .three, .four
+        {
+            padding: 0;
+            margin: 0;
+            background-color: burlywood;
+            border-style: solid;
+            border-radius: 10%;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+            flex: 100%;
+            align-items: center;
+            block-size: auto;
+        }
+        .grid
+        {
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-areas:
+                    'five six'
+                    'seven eight';
+
+            grid-template-rows: none;
+            gap: 10px;
+            align-content: center;
+            justify-items: center;
+
+
+        }
+
+        .five, .six, .seven, .eight
+        {
+            padding: 0;
+            margin: 0;
+            background-color: burlywood;
+            border-style: solid;
+            border-radius: 10%;
+            text-align: center;
+            height: 100%;
+            width: 30%;
+            block-size: auto;
+        }
+    }
