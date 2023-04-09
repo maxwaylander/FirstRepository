@@ -1,3 +1,6 @@
+<?php
+include 'myphp.php';
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,9 +9,11 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="./Styles/Styles.css">
+    <link rel="stylesheet" href= <?php echo $GLOBALS['style']?>>
+
 </head>
 <body>
+
 
 <header>
 
@@ -16,9 +21,6 @@
 
 </header>
 <main>
-
-
-
 
     <div class="surname">
         Климик Максим 
@@ -29,7 +31,7 @@
     </div>
 
     <div class="job">
-        <p>Работаю на ПАО "ММК" помощником машиниста электровоза. Моя работа заключается в своевременной и безопасной
+        <p> Работаю на ПАО "ММК" помощником машиниста электровоза. Моя работа заключается в своевременной и безопасной
         подаче вагонов в железнодорожные тупики под нужды цехов. Всегда искал что-то интересное,
             различные секции, кружки. На самом деле к программированию лежит душа, очень давно хотел попробовать
             поработать в этой сфере, ведь с компьютером с раннего детства на "ты". Люблю учиться чему-то новому,
