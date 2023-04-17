@@ -1,3 +1,53 @@
+<?php
+$style=null;
+$date = new DateTime('now');
+$hour = $date->format('G');
+if ( ($hour > 10) && ($hour < 22) ) {
+    $style = './Styles/Style.css';
+
+} else {
+    $style = './Styles/StylesNight.css';
+}
+//$dochtml = new domDocument();
+//$dochtml ->loadHTML('homwrk.php');
+//$self = $dochtml ->getElementById("self");
+//$reply = $dochtml ->getElementById("reply");
+//echo "<script>console.log('" . $self . "');</script>";
+//echo "<script>console.log('" . $reply . "');</script>"
+
+$self = " Работаю на ПАО \"ММК\" помощником машиниста электровоза. Моя работа заключается в своевременной и безопасной
+        подаче вагонов в железнодорожные тупики под нужды цехов. Всегда искал что-то интересное,
+            различные секции, кружки. На самом деле к программированию лежит душа, очень давно хотел попробовать
+            поработать в этой сфере, ведь с компьютером с раннего детства на \"ты\". Люблю учиться чему-то новому,
+            что-то узнавать";
+$reply = "Все было супер, много нового, жаль не смогу присутствовать на всех занятиях.";
+$selfArr = explode(".",$self);
+$replyArr = explode(" ",$reply);
+$output = null;
+$output1 = null;
+$color = "#7FFF00";
+$selfArr[0] = "<font style='color: chartreuse'>".$selfArr[0].".</font>";
+for ($i=0; $i<count($selfArr); $i++){
+    if ($output == null){
+        $output = $selfArr[$i];
+    }  else {
+        $output = $output.$selfArr[$i].".";
+    }
+}
+for ($i=0;$i<count($replyArr); $i++){
+    if ($i%2==0) {
+        $replyArr[$i] = "<font style='color: blue'>".$replyArr[$i]."</font>";
+    } else {
+        $replyArr[$i] = "<font style='color: red'>".$replyArr[$i]."</font>";
+    }
+    if ($output1 == null){
+        $output1 = $replyArr[$i]." ";
+    }  else {
+        $output1 = $output1.$replyArr[$i]." ";
+    }
+}
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,9 +56,11 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="./Styles/Styles.css">
+    <link rel="stylesheet" href= "./Styles/Styles.css">
+
 </head>
 <body>
+
 
 <header>
 
@@ -16,9 +68,6 @@
 
 </header>
 <main>
-
-
-
 
     <div class="surname">
         Климик Максим 
@@ -28,13 +77,9 @@
     <img src="./images/photo.jpg"  alt="Архивное фото" class="photo">
     </div>
 
-    <div class="job">
-        <p>Работаю на ПАО "ММК" помощником машиниста электровоза. Моя работа заключается в своевременной и безопасной
-        подаче вагонов в железнодорожные тупики под нужды цехов. Всегда искал что-то интересное,
-            различные секции, кружки. На самом деле к программированию лежит душа, очень давно хотел попробовать
-            поработать в этой сфере, ведь с компьютером с раннего детства на "ты". Люблю учиться чему-то новому,
-            что-то узнавать.  </p>
-        <p> Все было супер, много нового, жаль не смогу присутствовать на всех занятиях.</p>
+    <div class="job" id="info">
+        <p id="self"> <?php echo $output; ?> </p>
+        <p id="reply"> <?php echo $output1; ?></p>
     </div>
     <div class="box">
           <section class="flex">
