@@ -1,4 +1,5 @@
 <?php
+
 $style=null;
 $date = new DateTime('now');
 $hour = $date->format('G');
@@ -47,6 +48,7 @@ for ($i=0;$i<count($replyArr); $i++){
     }
 }
 
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -56,6 +58,7 @@ for ($i=0;$i<count($replyArr); $i++){
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
     <link rel="stylesheet" href= "./Styles/Styles.css">
 
 </head>
@@ -77,9 +80,11 @@ for ($i=0;$i<count($replyArr); $i++){
     <img src="./images/photo.jpg"  alt="Архивное фото" class="photo">
     </div>
 
+
     <div class="job" id="info">
         <p id="self"> <?php echo $output; ?> </p>
         <p id="reply"> <?php echo $output1; ?></p>
+
     </div>
     <div class="box">
           <section class="flex">
