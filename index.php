@@ -1,69 +1,37 @@
 <?php
 
-$a = 4;
-while ($a <=12 ){
-        $a++;
-        echo $a.'<br>';
-    }
+//function task1(){
+//    $a = mt_rand(0,10);
+//    $b = mt_rand(0,10);
+//    echo "a=$a b=$b" . '<br>';
+//
+//    if($a<$b){
+//        return $b;
+//    }else{
+//        return $a;
+//    }
+//}
+//$c = task1();
+//echo $c;
 
+//Создать функцию, которая принимает длину двух катетов и
+// возвращает значение гипотенузы прямоугольного
+// треугольника.
 
-$num = 1000;
-$n=0;
-while ($num>=50)
+//function task2($a,$b){
+//    $c = sqrt($a*$a+$b*$b);
+//    return $c;
+//}
+//$a = 3;
+//$b = 4;
+//echo task2($a,$b);
+
+function task4()
 {
-    $num=$num/2;
-    $n++;
-}
-echo $n.'<br>' ;
-
-
-$num=1000;
-for($m=0; $m>-1; $m++){
-    if($num>=50){
-        $num/=2;
-    }
-    else{
-        break;
+    $arr4 = [];
+    for ($i = 0; $i <= 10; $i++) {
+        $arr4[$i] = mt_rand(0, 10);
+        echo $arr4[$i] . " ";
     }
 }
-echo $m.'<br>' ;
-
-
-
-$i = 8;
-
-switch ($i) {
-    case 0:
-        echo '0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10';
-        break;
-    case 1:
-        echo '0,1, 2, 3, 4, 5, 6, 7, 8, 9';
-        break;
-    case 2:
-        echo '0,1, 2, 3, 4, 5, 6, 7, 8';
-        break;
-    case 3:
-        echo '0,1, 2, 3, 4, 5, 6, 7';
-        break;
-    case 4:
-        echo '0,1, 2, 3, 4, 5, 6';
-        break;
-    case 5:
-        echo '0,1, 2, 3, 4, 5';
-        break;
-    case 6:
-        echo '0,1, 2, 3, 4';
-        break;
-    case 7:
-        echo '0,1, 2, 3';
-        break;
-    case 8:
-        echo '0,1, 2';
-        break;
-    case 9:
-        echo '0,1';
-        break;
-    case 10:
-        echo '0';
-        break;
-}
+echo task4();

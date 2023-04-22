@@ -34,19 +34,25 @@ for ($i=0; $i<count($selfArr); $i++){
         $output = $output.$selfArr[$i].".";
     }
 }
-for ($i=0;$i<count($replyArr); $i++){
-    if ($i%2==0) {
-        $replyArr[$i] = "<font style='color: blue'>".$replyArr[$i]."</font>";
+for ($i=0;$i<count($replyArr); $i++) {
+    if ($i % 2 == 0) {
+        $replyArr[$i] = "<font style='color: blue'>" . $replyArr[$i] . "</font>";
     } else {
-        $replyArr[$i] = "<font style='color: red'>".$replyArr[$i]."</font>";
+        $replyArr[$i] = "<font style='color: red'>" . $replyArr[$i] . "</font>";
     }
-    if ($output1 == null){
-        $output1 = $replyArr[$i]." ";
-    }  else {
-        $output1 = $output1.$replyArr[$i]." ";
+    if ($output1 == null) {
+        $output1 = $replyArr[$i] . " ";
+    } else {
+        $output1 = $output1 . $replyArr[$i] . " ";
     }
 }
-
+$str = strip_tags(file_get_contents('homwrk.php'));
+$patt = '~(?<vowels>[АаЕеЁёИиОоУуЫыЭэЮюЯя])|~iu';
+$Vovels = preg_match_all($patt, $str);
+echo 'Количество гласных букв' . $Vovels . '<br>';
+$word = str_word_count($str);
+echo 'Количество слов' . $word;
+//не видит путь к файлу
 ?>
 <!doctype html>
 <html lang="en">
