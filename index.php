@@ -1,5 +1,42 @@
 <?php
 
+
+//function task1(){
+//    $a = mt_rand(0,10);
+//    $b = mt_rand(0,10);
+//    echo "a=$a b=$b" . '<br>';
+//
+//    if($a<$b){
+//        return $b;
+//    }else{
+//        return $a;
+//    }
+//}
+//$c = task1();
+//echo $c;
+
+//Создать функцию, которая принимает длину двух катетов и
+// возвращает значение гипотенузы прямоугольного
+// треугольника.
+
+//function task2($a,$b){
+//    $c = sqrt($a*$a+$b*$b);
+//    return $c;
+//}
+//$a = 3;
+//$b = 4;
+//echo task2($a,$b);
+
+//function task4()
+//{
+//    $arr4 = [];
+//    for ($i = 0; $i <= 10; $i++) {
+//        $arr4[$i] = mt_rand(0, 10);
+//        echo $arr4[$i] . " ";
+//    }
+//}
+
+
 //$a = 4;
 //while ($a <=12 ){
 //        $a++;
@@ -227,28 +264,29 @@
 //    else echo "нет"; break;
 //}
 
-echo " <br> 8 задание 17 слайд <br>";
+//echo " <br> 8 задание 17 слайд <br>";
+//
+//$arr1 = [["банан", "ананас", "яблоко"], ["андромеда", "бельтегейзе", "альдебаран"]];
+//foreach ($arr1 as $key => $value) {
+//    foreach ($value as $item) {
+//        $a = mb_str_split($item);
+//        if ($a[0] == 'а') {
+//            echo $item . '<br>';
+//        }
+//    }
+//}
+//
+//echo " <br> 9 задание 17 слайд <br>";
+//$arr2 = [[1,2,3],[2,3]];
+//$arr2Count = 0;
+//foreach ($arr2 as $key => $value){
+//    if($arr2Count == 0){
+//        $arr2Count = count($arr2);
+//        echo "Количество элементов массива:".$arr2Count.'</br>';
+//    }
+//    foreach($value as $item ){
+//        echo "Количество элементов измерения:".count($value).'</br>';
+//        break;
+//    }
+//}
 
-$arr1 = [["банан", "ананас", "яблоко"], ["андромеда", "бельтегейзе", "альдебаран"]];
-foreach ($arr1 as $key => $value) {
-    foreach ($value as $item) {
-        $a = mb_str_split($item);
-        if ($a[0] == 'а') {
-            echo $item . '<br>';
-        }
-    }
-}
-
-echo " <br> 9 задание 17 слайд <br>";
-$arr2 = [[1,2,3],[2,3]];
-$arr2Count = 0;
-foreach ($arr2 as $key => $value){
-    if($arr2Count == 0){
-        $arr2Count = count($arr2);
-        echo "Количество элементов массива:".$arr2Count.'</br>';
-    }
-    foreach($value as $item ){
-        echo "Количество элементов измерения:".count($value).'</br>';
-        break;
-    }
-}
