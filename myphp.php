@@ -13,11 +13,12 @@
 //$self = $dochtml ->getElementById("self");
 //$reply = $dochtml ->getElementById("reply");
 
-
-$str = strip_tags(file_get_contents("homwrk.php"));
-echo $str;
-$patt = '~(?<vowels>[аеёиоуыэюя])|~iu';
-$Vovels = preg_match_all($patt, $str);
-echo 'Количество гласных букв' . $Vovels . '<br>';
-$word = str_word_count($str);
-echo 'Количество слов' . $word;
+function getWord(){
+    $str = strip_tags(file_get_contents('homwrk.php'));
+    echo $str;
+    $patt = '~(?<vowels>[АаЕеЁёИиОоУуЫыЭэЮюЯя])|~iu';
+    $Vovels = preg_match_all($patt, $str);
+    echo 'Количество гласных букв' . $Vovels . '<br>';
+    $word = str_word_count($str);
+    echo 'Количество слов' . $word . '<br>';
+}

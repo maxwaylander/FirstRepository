@@ -1,77 +1,88 @@
 <?php
+include_once 'myphp.php';
+function getStyle()
+{
+    $style = null;
+    $date = new DateTime('now');
+    $hour = $date->format('H');
+    if (($hour > 10) && ($hour < 22)) {
+        $style = './Styles/Styles.css';
 
-$style = null;
-$date = new DateTime('now');
-$hour = $date->format('G');
-if (($hour > 10) && ($hour < 22)) {
-    $style = './Styles/Style.css';
-
-} else {
-    $style = './Styles/StylesNight.css';
+    } else {
+        $style = './Styles/StylesNight.css';
+    }
+    echo $style;
 }
-//$dochtml = new domDocument();
-//$dochtml ->loadHTML('homwrk.php');
-//$self = $dochtml ->getElementById("self");
-//$reply = $dochtml ->getElementById("reply");
-//echo "<script>console.log('" . $self . "');</script>";
-//echo "<script>console.log('" . $reply . "');</script>"
 
-$self = " Работаю на ПАО \"ММК\" помощником машиниста электровоза. Моя работа заключается в своевременной и безопасной
+function textColor(): array
+{
+    $arr = [];
+    $self = " Работаю на ПАО \"ММК\" помощником машиниста электровоза. Моя работа заключается в своевременной и безопасной
         подаче вагонов в железнодорожные тупики под нужды цехов. Всегда искал что-то интересное,
             различные секции, кружки. На самом деле к программированию лежит душа, очень давно хотел попробовать
             поработать в этой сфере, ведь с компьютером с раннего детства на \"ты\". Люблю учиться чему-то новому,
             что-то узнавать";
-$reply = "Все было супер, много нового, жаль не смогу присутствовать на всех занятиях.";
-$selfArr = explode(".", $self);
-$replyArr = explode(" ", $reply);
-$output = null;
-$output1 = null;
-$color = "#7FFF00";
-$selfArr[0] = "<font style='color: chartreuse'>" . $selfArr[0] . ".</font>";
-for ($i = 0; $i < count($selfArr); $i++) {
-    if ($output == null) {
-        $output = $selfArr[$i];
-    } else {
-        $output = $output . $selfArr[$i] . ".";
+    $reply = "Все было супер, много нового, жаль не смогу присутствовать на всех занятиях.";
+    $selfArr = explode(".", $self);
+    $replyArr = explode(" ", $reply);
+    $output = null;
+    $output1 = null;
+    $color = "#7FFF00";
+    $selfArr[0] = "<font style='color: chartreuse'>" . $selfArr[0] . ".</font>";
+    for ($i = 0; $i < count($selfArr); $i++) {
+        if ($output == null) {
+            $output = $selfArr[$i];
+        } else {
+            $output = $output . $selfArr[$i] . ".";
+        }
     }
-}
-for ($i = 0; $i < count($replyArr); $i++) {
-    if ($i % 2 == 0) {
-        $replyArr[$i] = "<font style='color: blue'>" . $replyArr[$i] . "</font>";
-    } else {
-        $replyArr[$i] = "<font style='color: red'>" . $replyArr[$i] . "</font>";
+    $arr[0] = $output;
+    for ($i = 0; $i < count($replyArr); $i++) {
+        if ($i % 2 == 0) {
+            $replyArr[$i] = "<font style='color: blue'>" . $replyArr[$i] . "</font>";
+        } else {
+            $replyArr[$i] = "<font style='color: red'>" . $replyArr[$i] . "</font>";
+        }
+        if ($output1 == null) {
+            $output1 = $replyArr[$i] . " ";
+        } else {
+            $output1 = $output1 . $replyArr[$i] . " ";
+        }
     }
-    if ($output1 == null) {
-        $output1 = $replyArr[$i] . " ";
-    } else {
-        $output1 = $output1 . $replyArr[$i] . " ";
-    }
+    $arr[1] = $output1;
+    return $arr;
 }
 
+getWord();
 //$str = strip_tags(file_get_contents('homwrk.php'));
+//echo $str;
 //$patt = '~(?<vowels>[АаЕеЁёИиОоУуЫыЭэЮюЯя])|~iu';
 //$Vovels = preg_match_all($patt, $str);
 //echo 'Количество гласных букв' . $Vovels . '<br>';
 //$word = str_word_count($str);
-//echo 'Количество слов' . $word;
-////не видит путь к файлу
+//echo 'Количество слов' . $word . '<br>';
+//не видит путь к файлу
 
 
-echo 'Первая дата: 23.06.1995 г.' . '<br>';
-echo 'Вторая дата: 22.04.2023 г.' . '<br>';
-echo 'Разница дат:';
+function getDays()
+{
+    echo 'Первая дата: 23.06.1995 г.' . '<br>';
+    echo 'Вторая дата: 22.04.2023 г.' . '<br>';
+    echo 'Разница дат:';
 
-$d1 = '1995-06-23 00:00:00';
-$d2 = '2023-04-22 00:00:00';
+    $d1 = '1995-06-23 00:00:00';
+    $d2 = '2023-04-22 00:00:00';
 
-$d1_ts = strtotime($d1);
-$d2_ts = strtotime($d2);
+    $d1_ts = strtotime($d1);
+    $d2_ts = strtotime($d2);
 
-$seconds = abs($d1_ts - $d2_ts);
-$days = floor($seconds / 86400);
+    $seconds = abs($d1_ts - $d2_ts);
+    $days = floor($seconds / 86400);
 
-echo $days . ' ' . 'дней.' . '<br>';
+    echo $days . ' ' . 'дней.' . '<br>';
+}
 
+getDays();
 ?>
 <!doctype html>
 <html lang="en">
@@ -82,8 +93,8 @@ echo $days . ' ' . 'дней.' . '<br>';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
-    <link rel="stylesheet" href="./Styles/Styles.css">
-    <?php include_once 'myphp.php' ?>
+    <link rel="stylesheet" href=<?php echo getStyle(); ?>>
+
 
 </head>
 <body>
@@ -106,8 +117,8 @@ echo $days . ' ' . 'дней.' . '<br>';
 
 
     <div class="job" id="info">
-        <p id="self"> <?php echo $output; ?> </p>
-        <p id="reply"> <?php echo $output1; ?></p>
+        <p id="self"> <?php echo textColor()[0]; ?> </p>
+        <p id="reply"> <?php echo textColor()[1]; ?></p>
 
     </div>
     <div class="box">
