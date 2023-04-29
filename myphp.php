@@ -13,12 +13,12 @@
 //$self = $dochtml ->getElementById("self");
 //$reply = $dochtml ->getElementById("reply");
 
-function getWord(){
-    $str = strip_tags(file_get_contents('homwrk.php'));
-    echo $str;
+function getWord()
+{
+    $str = strip_tags(file_get_contents('razmetka.html'));
     $patt = '~(?<vowels>[АаЕеЁёИиОоУуЫыЭэЮюЯя])|~iu';
     $Vovels = preg_match_all($patt, $str);
-    echo 'Количество гласных букв' . $Vovels . '<br>';
-    $word = str_word_count($str);
-    echo 'Количество слов' . $word . '<br>';
+    echo 'Количество гласных букв ' . $Vovels . '<br>';
+    $word = explode(' ', $str);
+    echo 'Количество слов ' . count($word) . '<br>';
 }

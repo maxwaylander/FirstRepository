@@ -290,3 +290,53 @@
 //    }
 //}
 
+
+//?>
+<?php
+//print_r($_GET);
+//$idPng = $_GET["id"];
+//echo $idPng;
+//?>
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport"-->
+<!--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+<!--    <title>Document</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<img src="images/--><?php //echo $idPng; ?><!--.png" alt="Кот">-->
+<!---->
+<!--<a href="index.php?id = --><?php //echo ($idPng<4)+1; ?><!--">Вперед</a>-->
+<!--<a href="index.php?id = --><?php //echo $idPng-1; ?><!--">Назад</a>-->
+<!--</body>-->
+<!--</html>-->
+
+<?php
+print_r($_POST);
+$idPng = isset($_GET['id']) ? $_GET['id'] : 1;
+echo $idPng;
+?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<img src="images/<?php echo $idPng; ?>.png" alt="Кот">
+
+<a href="index.php?id=<?php echo(($idPng < 4) ? $idPng + 1 : 1); ?>">Вперед</a>
+<a href="index.php?id=<?php echo(($idPng > 1) ? $idPng - 1 : 4); ?>">Назад</a>
+<!--<form action="" method="post">-->
+<!--    <input type="text" name="login">-->
+<!--    <input type="password" name="password">-->
+<!--    <button type="submit">Send!</button>-->
+</form>
+</body>
+</html>
