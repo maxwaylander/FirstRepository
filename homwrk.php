@@ -52,28 +52,31 @@ function textColor(): array
     $arr[1] = $output1;
     return $arr;
 }
-
-getWord();
-
-function getDays()
-{
-    echo 'Первая дата: 23.06.1995 г.' . '<br>';
-    echo 'Вторая дата: 22.04.2023 г.' . '<br>';
-    echo 'Разница дат:';
-
-    $d1 = '1995-06-23 00:00:00';
-    $d2 = '2023-04-22 00:00:00';
-
-    $d1_ts = strtotime($d1);
-    $d2_ts = strtotime($d2);
-
-    $seconds = abs($d1_ts - $d2_ts);
-    $days = floor($seconds / 86400);
-
-    echo $days . ' ' . 'дней.' . '<br>';
+session_start();
+if ($_SESSION['status'] == "LOGGED"){
+    echo 'Добро пожаловать, ' . $_SESSION['login'] . '!';
 }
+//getWord();
 
-getDays();
+//function getDays()
+//{
+//    echo 'Первая дата: 23.06.1995 г.' . '<br>';
+//    echo 'Вторая дата: 22.04.2023 г.' . '<br>';
+//    echo 'Разница дат:';
+//
+//    $d1 = '1995-06-23 00:00:00';
+//    $d2 = '2023-04-22 00:00:00';
+//
+//    $d1_ts = strtotime($d1);
+//    $d2_ts = strtotime($d2);
+//
+//    $seconds = abs($d1_ts - $d2_ts);
+//    $days = floor($seconds / 86400);
+//
+//    echo $days . ' ' . 'дней.' . '<br>';
+//}
+
+//getDays();
 ?>
 <!doctype html>
 <html lang="en">
@@ -89,8 +92,21 @@ getDays();
 
 </head>
 <body>
-
-
+<div <?php
+if ($_SESSION['login'] == "Max"){
+    echo 'hidden';
+}
+?>>
+<form action="registerPage.php">
+    <div class="containerReg">
+        <h2>Регистрация</h2>
+    <button type="submit">Зарегистрироваться</button>
+    </div>
+    <div>
+        <p>Уже зарегистрированы? <a href="signPage.php">Войти в аккаунт</a>.</p>
+    </div>
+</form>
+</div>
 <header>
 
     <img src="./images/header1.jpg" alt="Cолнце" class="header">
